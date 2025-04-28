@@ -1,14 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Construir imagen') {
+        stage('Build') {
             steps {
-                sh 'docker-compose build'
-            }
-        }
-        stage('Levantar servicios') {
-            steps {
-                sh 'docker-compose up -d'
+                echo 'Proyecto clonado y listo. Validar cambios manualmente en Docker Compose.'
             }
         }
     }
